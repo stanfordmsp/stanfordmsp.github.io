@@ -7,52 +7,92 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
     <style>
-        html, body, .tab-content, .tab-pane {
+        html,
+        body,
+        .tab-content,
+        .tab-pane {
             height: 100%;
         }
+
         body {
             background: black;
+        }
+
+        #videoModal .modal-content {
+            min-width: 600px;
+            min-height: 450px;
+        }
+
+        .modal.fade .modal-dialog {
+            -webkit-transition: -webkit-transform 0.3s ease-out;
+            -moz-transition: -moz-transform 0.3s ease-out;
+            -o-transition: -o-transform 0.3s ease-out;
+            transition: transform 0.3s ease-out;
         }
     </style>
     <title>Demystifying the Cloud: Monday Jan 29 2018</title>
 </head>
 
 <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">Microsoft Student Partners at Stanford</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        
+
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav nav nav-tabs mr-auto" role="tablist">
-            <!--li class="nav-item active">
+                <!--li class="nav-item active">
                 <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
             </li-->
-            <li class="nav-item active">
-                <a class="nav-link" href="#feb-2018-pathway" role="tab" data-toggle="tab">3/1/2018 - Tap the Web</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Older workshops
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#jan-2018-demystifying" role="tab" data-toggle="tab">Jan 2018 - Demystifying the Cloud</a>
-            </li>
-        </div>
-        </nav>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#feb-2018-pathway" role="tab" data-toggle="tab">3/1/2018 - Tap the Web</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        Older workshops
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#jan-2018-demystifying" role="tab" data-toggle="tab">Jan 2018 - Demystifying the Cloud</a>
+                </li>
+                </div>
+    </nav>
 
     <div class="tab-content">
-            <div role="tabpanel" class="tab-pane fade show active" id="feb-2018-pathway">
-                    <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTlC4WjxffBFAgWMnj-v28ZOtIb_A-L4TUIh_Bd8Vrup7APTUuxELdqFFVNpmH0LfYwvK2yugyTTETU/embed?start=false&loop=false&delayms=3000"
-                    frameborder="0" width="100%" height="100%" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-            </div>
-            <div role="tabpanel" class="tab-pane fade" id="jan-2018-demystifying">
-                    <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSPObmLiaf5itPR3o4pA3tS2PBkwAQGZDjd--CLg_sju_a-MGa3qE1JWHmzbyzDM0CgRc74QlPjgMit/embed?start=false&loop=false&delayms=3000" frameborder="0" width="100%" height="100%" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>                    
-            </div>
-            <div role="tabpanel" class="tab-pane fade" id="references">ccc</div>
+        <div role="tabpanel" class="tab-pane fade show active" id="feb-2018-pathway">
+            <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTlC4WjxffBFAgWMnj-v28ZOtIb_A-L4TUIh_Bd8Vrup7APTUuxELdqFFVNpmH0LfYwvK2yugyTTETU/embed?start=false&loop=false&delayms=3000"
+                frameborder="0" width="100%" height="100%" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+        </div>
+        <div role="tabpanel" class="tab-pane fade" id="jan-2018-demystifying">
+            <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSPObmLiaf5itPR3o4pA3tS2PBkwAQGZDjd--CLg_sju_a-MGa3qE1JWHmzbyzDM0CgRc74QlPjgMit/embed?start=false&loop=false&delayms=3000"
+                frameborder="0" width="100%" height="100%" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+        </div>
+        <div role="tabpanel" class="tab-pane fade" id="references">ccc</div>
     </div>
-    
+
+    <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Our next workshop - 3/1/18</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/ra7X_0vdQiY" frameborder="0" allow="autoplay; encrypted-media"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-footer text-center">
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSc-eLSKwkrdAel5vGL32dBlulsJ89bgFE6uwv5OG-NEMGTPIw/viewform?c=0&w=1">
+                        <button class="btn btn-lg btn-primary">RSVP now</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
@@ -60,6 +100,11 @@
         crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+    <script>
+        $(function () {
+            $("#videoModal").modal("show");
+        })
+    </script>
 
 </body>
 
